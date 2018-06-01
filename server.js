@@ -5,13 +5,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-// var dotenv = require('dotenv');
+var dotenv = require('dotenv');
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 var flash = require('connect-flash');
 var app = express();
 
-// dotenv.load();
+dotenv.load();
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -123,8 +123,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
 
 var mysql = require("mysql");
 
@@ -141,16 +139,6 @@ connection.connect(function(err) {
     return;
   }
 
-  console.log("connected as id " + connection.threadId);
+  app.listen(PORT);
+  console.log("connected as id " + PORT);
 });
-
-// Use Handlebars to render the main index.html 
-// app.get("/", function(req, res) {
-//   connection.query("SELECT * FROM plans;", function(err, data) {
-//     if (err) {
-//       return res.status(500).end();
-//     }
-
-//     res.render("index", { plans: data });
-//   });
-// });
