@@ -5,13 +5,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-var dotenv = require('dotenv');
+// var dotenv = require('dotenv');
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 var flash = require('connect-flash');
 var app = express();
 
-dotenv.load();
+require("dotenv").config();
+// dotenv.load();
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -31,7 +32,7 @@ const strategy = new Auth0Strategy(
     clientID: process.env.AUTH0_CLIENT_ID,
     clientSecret: process.env.AUTH0_CLIENT_SECRET,
     callbackURL:
-      process.env.AUTH0_CALLBACK_URL || 'http://localhost:3000/callback'
+      process.env.AUTH0_CALLBACK_URL || 'http://localhost:8080/callback'
   },
   function(accessToken, refreshToken, extraParams, profile, done) {
     // accessToken is the token to call Auth0 API (not needed in the most cases)

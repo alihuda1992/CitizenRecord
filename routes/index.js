@@ -11,7 +11,7 @@ const env = {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.send('<a href="/login"> Login</a>' );
 });
 
 router.get('/login', passport.authenticate('auth0', {
