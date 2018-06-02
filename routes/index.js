@@ -1,6 +1,6 @@
-const express = require('express');
-const passport = require('passport');
-const router = express.Router();
+var express = require('express');
+var passport = require('passport');
+var router = express.Router();
 
 const env = {
   AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
