@@ -30,7 +30,7 @@ html(lang='en')
     link(href='css/style.css', rel='stylesheet')
     // CITIZEN RECORD
     // =======================================================
-    | -->
+    
   body
     //
       Page Content
@@ -47,7 +47,7 @@ html(lang='en')
             | CITIZEN RECORD
           p.tagline
             | If you LIVED SOMETHING, UPLOAD SOMETHING.
-          a.btn.btn-full(href='#about') Get Started Now
+          a.btn.btn-full(href='#about') Welcome Citizen
     // /Hero
     // Header
     header#header
@@ -66,32 +66,7 @@ html(lang='en')
             li
               a(href='#portfolio') File Record
             li
-              a(href='#team') Team
-            li.menu-has-children
-              a(href='') Search Records
-              ul
-                li
-                  a(href='#') By Agency
-                li.menu-has-children
-                  a(href='#') Drop Down 2
-                  ul
-                    li
-                      a(href='#') Name
-                    li
-                      a(href='#') Badge #
-                    li
-                      a(href='#') Date
-                    li
-                      a(href='#') Location
-                    li
-                      a(href='#') Citizen Hero 
-                li
-                  a(href='#') Drop Down 3
-                li
-                  a(href='#') Drop Down 4
-                li
-                  a(href='#') Drop Down 5
-            li
+             a(href='search.html') Search Records
               a(href='#contact') Contact Us
         // #nav-menu-container
         nav.nav.social-nav.pull-right.d-none.d-lg-inline
@@ -110,8 +85,9 @@ html(lang='en')
         h2
           | About Citizen Record
         p
-          | Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat euripidis ea pri, sed veniam tacimates ex. Menandri
-          | temporibus an duo.
+          | Citizen record is a community driven repository of grievances and accounts submitted by 
+          | members about their local community officials. By implementing this platform we encourage you
+          | to share your story with the world. If you Live something UPLOAD something!
         .row.stats-row
           .stats-col.text-center.col-md-3.col-sm-6
             .circle
@@ -230,165 +206,72 @@ html(lang='en')
       .container
         form#contact_form.well.form-horizontal(action=' ', method='post')
           fieldset
-            // Form Name
-            legend Tell Your Story!
-            // Text input
-            .form-group
-              label.col-md-4.control-label Username
-              .col-md-4.inputGroupContainer
-                .input-group
-                  span.input-group-addon
-                    i.glyphicon.glyphicon-user
-                  input.form-control(name='first_name', placeholder='User Name', type='text')
-            // Text input
-            .form-group
-              label.col-md-4.control-label Date of Incident
-              .col-md-4.inputGroupContainer
-                .input-group
-                  span.input-group-addon
-                    i.glyphicon.glyphicon-user
-                  input.form-control(name='Date', placeholder='month/date/year', type='text')
-            // Text input
-            .form-group
-              label.col-md-4.control-label E-Mail
-              .col-md-4.inputGroupContainer
-                .input-group
-                  span.input-group-addon
-                    i.glyphicon.glyphicon-envelope
-                  input.form-control(name='email', placeholder='E-Mail Address', type='text')
-            // Text input
-            .form-group
-              label.col-md-4.control-label Phone #
-              .col-md-4.inputGroupContainer
-                .input-group
-                  span.input-group-addon
-                    i.glyphicon.glyphicon-earphone
-                  input.form-control(name='zip code', placeholder='(845)555-1212', type='text')
-            // Text input
-            .form-group
-              label.col-md-4.control-label Address
-              .col-md-4.inputGroupContainer
-                .input-group
-                  span.input-group-addon
-                    i.glyphicon.glyphicon-home
-                  input.form-control(name='address', placeholder='Address', type='text')
-            // Text input
-            .form-group
-              label.col-md-4.control-label City
-              .col-md-4.inputGroupContainer
-                .input-group
-                  span.input-group-addon
-                    i.glyphicon.glyphicon-home
-                  input.form-control(name='city', placeholder='city', type='text')
-            // Select Basic
-            .form-group
-              label.col-md-4.control-label State
-              .col-md-4.selectContainer
-                .input-group
-                  span.input-group-addon
-                    i.glyphicon.glyphicon-list
-                  select.form-control.selectpicker(name='Agency')
-                    option(value=' ') Please Select The Agency
-                    option Alabama
-                    option Alaska
-                    option Arizona
-                    option Arkansas
-                    option California
-                    option Colorado
-                    option Connecticut
-                    option Delaware
-                    option District of Columbia
-                    option  Florida
-                    option Georgia
-                    option Hawaii
-                    option daho
-                    option Illinois
-                    option Indiana
-                    option Iowa
-                    option  Kansas
-                    option Kentucky
-                    option Louisiana
-                    option Maine
-                    option Maryland
-                    option  Mass
-                    option Michigan
-                    option Minnesota
-                    option Mississippi
-                    option Missouri
-                    option Montana
-                    option Nebraska
-                    option Nevada
-                    option New Hampshire
-                    option New Jersey
-                    option New Mexico
-                    option New York
-                    option North Carolina
-                    option North Dakota
-                    option Ohio
-                    option Oklahoma
-                    option Oregon
-                    option Pennsylvania
-                    option Rhode Island
-                    option South Carolina
-                    option South Dakota
-                    option Tennessee
-                    option Texas
-                    option  Uttah
-                    option Vermont
-                    option Virginia
-                    option Washington
-                    option West Virginia
-                    option Wisconsin
-                    option Wyoming
-            // Text input
-            .form-group
-              label.col-md-4.control-label Zip Code
-              .col-md-4.inputGroupContainer
-                .input-group
-                  span.input-group-addon
-                    i.glyphicon.glyphicon-home
-                  input.form-control(name='zip', placeholder='Zip Code', type='text')
-            // Text input
-            .form-group
-              label.col-md-4.control-label Website or domain name
-              .col-md-4.inputGroupContainer
-                .input-group
-                  span.input-group-addon
-                    i.glyphicon.glyphicon-globe
-                  input.form-control(name='website', placeholder='Website or domain name', type='text')
-            // radio checks
-            .form-group
-              label.col-md-4.control-label Do you have hosting?
-              .col-md-4
-                .radio
-                  label
-                    input(type='radio', name='hosting', value='yes')
-                    |  Yes
-                .radio
-                  label
-                    input(type='radio', name='hosting', value='no')
-                    |  No
-            // Text area
-            .form-group
-              label.col-md-4.control-label Project Description
-              .col-md-4.inputGroupContainer
-                .input-group
-                  span.input-group-addon
-                    i.glyphicon.glyphicon-pencil
-                  textarea.form-control(name='comment', placeholder='Project Description')
-            // Success message
-            #success_message.alert.alert-success(role='alert')
-              | Success 
-              i.glyphicon.glyphicon-thumbs-up
-              |  Thanks for contacting us, we will get back to you shortly.
-            // Button
-            .form-group
-              label.col-md-4.control-label
-              .col-md-4
-                button.btn.btn-warning(type='submit')
-                  | Send 
-                  span.glyphicon.glyphicon-send
-      // /.container
+           // Form Name
+legend Tell Your Story!
+// Text input
+.form-group
+  label.col-md-4.control-label Username
+  .col-md-4.inputGroupContainer
+    .input-group
+      span.input-group-addon
+        i.glyphicon.glyphicon-user
+      input.form-control(name='first_name', placeholder='User Name', type='text')
+// Text input
+.form-group
+  label.col-md-4.control-label Zipcode
+  .col-md-4.inputGroupContainer
+    .input-group
+      span.input-group-addon
+        i.glyphicon.glyphicon-user
+      input.form-control(name='Date', placeholder='Enter your zipcode (Ex. 30014)', type='text')
+// Text input
+.form-group
+  label.col-md-4.control-label Date of Incident
+  .col-md-4.inputGroupContainer
+    .input-group
+      span.input-group-addon
+        i.glyphicon.glyphicon-calendar
+      input.form-control(name='email', placeholder='YYYY-MM-DD', type='text')
+// Text input
+.form-group
+  label.col-md-4.control-label Badge ID#
+  .col-md-4.inputGroupContainer
+    .input-group
+      span.input-group-addon
+        i.glyphicon.glyphicon-user
+      input.form-control(name='zip code', placeholder='123456', type='text')
+// Text input
+.form-group
+  label.col-md-4.control-label Agency
+  .col-md-4.inputGroupContainer
+    .input-group
+      span.input-group-addon
+        i.glyphicon.glyphicon-home
+      input.form-control(name='address', placeholder='Police,Fire Department,DMV', type='text')
+// Text input
+.form-group
+  label.col-md-4.control-label Race
+  .col-md-4.inputGroupContainer
+    .input-group
+      span.input-group-addon
+        i.glyphicon.glyphicon-home
+      input.form-control(name='city', placeholder='This optional field helps us track demographic data', type='text')
+// Text input
+.form-group
+  label.col-md-4.control-label Content
+  .col-md-4.inputGroupContainer
+    .input-group
+      span.input-group-addon
+        i.glyphicon.glyphicon-pencil
+      input.form-control(name='zip', placeholder='Enter your post here. Limit 500 characters.', type='text')
+// Button
+.form-group
+  label.col-md-4.control-label
+  .col-md-4
+    button.btn.btn-warning(type='submit')
+      | Submit 
+      span.glyphicon.glyphicon-send
+.container
       //
         <div class="portfolio-grid">
         <div class="row">

@@ -5,7 +5,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-// var dotenv = require('dotenv');
+var dotenv = require('dotenv');
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 var flash = require('connect-flash');
@@ -125,21 +125,7 @@ app.use(function(err, req, res, next) {
 });
 
 
-var mysql = require("mysql");
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Maddough2018!",
-  database: "citizenrecord"
-});
-
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
 
   app.listen(PORT);
   console.log("connected as id " + PORT);
-});
