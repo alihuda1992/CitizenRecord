@@ -1,0 +1,676 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title CITIZEN RECORD
+    meta(content='width=device-width, initial-scale=1.0', name='viewport')
+    meta(content='', name='keywords')
+    meta(content='', name='description')
+    // Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph
+    meta(property='og:title', content='')
+    meta(property='og:image', content='')
+    meta(property='og:url', content='')
+    meta(property='og:site_name', content='')
+    meta(property='og:description', content='')
+    // Twitter Cards integration: https://dev.twitter.com/cards/
+    meta(name='twitter:card', content='summary')
+    meta(name='twitter:site', content='')
+    meta(name='twitter:title', content='')
+    meta(name='twitter:description', content='')
+    meta(name='twitter:image', content='')
+    // Favicon
+    link(href='img/favicon.ico', rel='icon')
+    // Google Fonts
+    link(href='https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900', rel='stylesheet')
+    // Bootstrap CSS File
+    link(href='lib/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Libraries CSS Files
+    link(href='lib/font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    // Main Stylesheet File
+    link(href='css/style.css', rel='stylesheet')
+    // CITIZEN RECORD
+    // =======================================================
+    | -->
+  body
+    //
+      Page Content
+      ==================================================
+    // Hero
+    section.hero
+      .container.text-center
+        .row
+          .col-md-12
+            a.hero-brand(href='index.html', title='Home')
+              img(alt='', img='', src='~/bootcamp/homework/Bell/img/Screen Shot 2018-05-24 at 7.56.16 PM.png')
+        .col-md-12
+          h1
+            | CITIZEN RECORD
+          p.tagline
+            | If you LIVED SOMETHING, UPLOAD SOMETHING.
+          a.btn.btn-full(href='#about') Get Started Now
+    // /Hero
+    // Header
+    header#header
+      .container
+        #logo.pull-left
+          // <a href="index.html"><img src="img/logo-nav.png" alt="" title="" /></img></a>
+          // Uncomment below if you prefer to use a text image
+          // <h1><a href="#hero">Bell</a></h1>
+        nav#nav-menu-container
+          ul.nav-menu
+            li
+              a(href='#about') About Us
+            li
+              a(href='#features') My Account 
+            // <li><a href="#portfolio">Search Record</a></li>
+            li
+              a(href='#portfolio') File Record
+            li
+              a(href='#team') Team
+            li.menu-has-children
+              a(href='') Search Records
+              ul
+                li
+                  a(href='#') By Agency
+                li.menu-has-children
+                  a(href='#') Drop Down 2
+                  ul
+                    li
+                      a(href='#') Name
+                    li
+                      a(href='#') Badge #
+                    li
+                      a(href='#') Date
+                    li
+                      a(href='#') Location
+                    li
+                      a(href='#') Citizen Hero 
+                li
+                  a(href='#') Drop Down 3
+                li
+                  a(href='#') Drop Down 4
+                li
+                  a(href='#') Drop Down 5
+            li
+              a(href='#contact') Contact Us
+        // #nav-menu-container
+        nav.nav.social-nav.pull-right.d-none.d-lg-inline
+          a(href='#')
+            i.fa.fa-twitter
+          a(href='#')
+            i.fa.fa-facebook
+          a(href='#')
+            i.fa.fa-linkedin
+          a(href='#')
+            i.fa.fa-envelope
+    // #header
+    // About
+    section#about.about
+      .container.text-center
+        h2
+          | About Citizen Record
+        p
+          | Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat euripidis ea pri, sed veniam tacimates ex. Menandri
+          | temporibus an duo.
+        .row.stats-row
+          .stats-col.text-center.col-md-3.col-sm-6
+            .circle
+              span.stats-no(data-toggle='counter-up') 12,320
+              |  Active Citizens
+          .stats-col.text-center.col-md-3.col-sm-6
+            .circle
+              span.stats-no(data-toggle='counter-up') 6679
+              |  Records Filed
+          .stats-col.text-center.col-md-3.col-sm-6
+            .circle
+              span.stats-no(data-toggle='counter-up') 198
+              |  Agencies with Records
+          .stats-col.text-center.col-md-3.col-sm-6
+            .circle
+              span.stats-no(data-toggle='counter-up') 1415
+              |  Cross Referenced Record
+    // /About
+    // Parallax
+    .block.bg-primary.block-pd-lg.block-bg-overlay.text-center(data-bg-img='img/parallax-bg.jpg', data-settings='{"stellar-background-ratio": 0.6}', data-toggle='parallax-bg')
+      h2
+        | Unshielded Voices of the People
+      //
+        <p>
+        This is the most powerful theme with thousands of options that you have never seen before.
+        </p>
+      img.gadgets-img.hidden-sm-down(alt='Bell - A perfect theme', src='img/social-media-550767_1280.png')
+    // /Parallax
+    // Features
+    section#features.features
+      .container
+        h2.text-center
+          | My Account
+        .row
+          .feature-col.col-lg-4.col-xs-12
+            .card.card-block.text-center
+              div
+                .feature-icon
+                  span.fa.fa-folder-open
+              div
+                h3
+                  | My Records
+                p
+                  | Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+          .feature-col.col-lg-4.col-xs-12
+            .card.card-block.text-center
+              div
+                .feature-icon
+                  span.fa.fa-search
+              div
+                h3
+                  | My Searches
+                p
+                  | Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+          .feature-col.col-lg-4.col-xs-12
+            .card.card-block.text-center
+              div
+                .feature-icon
+                  span.fa.fa-save
+              div
+                h3
+                  | Saved Records
+                p
+                  | Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+        .row
+          .feature-col.col-lg-4.col-xs-12
+            .card.card-block.text-center
+              div
+                .feature-icon
+                  span.fa.fa-database
+              div
+                h3
+                  | My Citizenship
+                p
+                  | Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+          .feature-col.col-lg-4.col-xs-12
+            .card.card-block.text-center
+              div
+                .feature-icon
+                  span.fa.fa-commenting
+              div
+                h3
+                  | Citizen Messages
+                p
+                  | Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+          .feature-col.col-lg-4.col-xs-12
+            .card.card-block.text-center
+              div
+                .feature-icon
+                  span.fa.fa-trash-o
+              div
+                h3
+                  | Shred Record
+                p
+                  | Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+    // /Features
+    // Call to Action
+    section.cta
+      .container
+        .row
+          .col-lg-9.col-sm-12.text-lg-left.text-center
+            h2
+              | Search Records
+            p
+              | Lorem ipsum dolor sit amet, nec ad nisl mandamus imperdiet, ut corpora cotidieque cum. Et brute iracundia his, est eu idque dictas gubergren
+          .col-lg-3.col-sm-12.text-lg-right.text-center
+            a.btn.btn-ghost(href='#') Search
+    // /Call to Action
+    // Portfolio
+    section#portfolio.portfolio
+      .container.text-center
+        h2
+          | File Record
+        p
+          | Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, Per nihil dicant commodo an.
+      .container
+        form#contact_form.well.form-horizontal(action=' ', method='post')
+          fieldset
+            // Form Name
+            legend Tell Your Story!
+            // Text input
+            .form-group
+              label.col-md-4.control-label Username
+              .col-md-4.inputGroupContainer
+                .input-group
+                  span.input-group-addon
+                    i.glyphicon.glyphicon-user
+                  input.form-control(name='first_name', placeholder='User Name', type='text')
+            // Text input
+            .form-group
+              label.col-md-4.control-label Date of Incident
+              .col-md-4.inputGroupContainer
+                .input-group
+                  span.input-group-addon
+                    i.glyphicon.glyphicon-user
+                  input.form-control(name='Date', placeholder='month/date/year', type='text')
+            // Text input
+            .form-group
+              label.col-md-4.control-label E-Mail
+              .col-md-4.inputGroupContainer
+                .input-group
+                  span.input-group-addon
+                    i.glyphicon.glyphicon-envelope
+                  input.form-control(name='email', placeholder='E-Mail Address', type='text')
+            // Text input
+            .form-group
+              label.col-md-4.control-label Phone #
+              .col-md-4.inputGroupContainer
+                .input-group
+                  span.input-group-addon
+                    i.glyphicon.glyphicon-earphone
+                  input.form-control(name='zip code', placeholder='(845)555-1212', type='text')
+            // Text input
+            .form-group
+              label.col-md-4.control-label Address
+              .col-md-4.inputGroupContainer
+                .input-group
+                  span.input-group-addon
+                    i.glyphicon.glyphicon-home
+                  input.form-control(name='address', placeholder='Address', type='text')
+            // Text input
+            .form-group
+              label.col-md-4.control-label City
+              .col-md-4.inputGroupContainer
+                .input-group
+                  span.input-group-addon
+                    i.glyphicon.glyphicon-home
+                  input.form-control(name='city', placeholder='city', type='text')
+            // Select Basic
+            .form-group
+              label.col-md-4.control-label State
+              .col-md-4.selectContainer
+                .input-group
+                  span.input-group-addon
+                    i.glyphicon.glyphicon-list
+                  select.form-control.selectpicker(name='Agency')
+                    option(value=' ') Please Select The Agency
+                    option Alabama
+                    option Alaska
+                    option Arizona
+                    option Arkansas
+                    option California
+                    option Colorado
+                    option Connecticut
+                    option Delaware
+                    option District of Columbia
+                    option  Florida
+                    option Georgia
+                    option Hawaii
+                    option daho
+                    option Illinois
+                    option Indiana
+                    option Iowa
+                    option  Kansas
+                    option Kentucky
+                    option Louisiana
+                    option Maine
+                    option Maryland
+                    option  Mass
+                    option Michigan
+                    option Minnesota
+                    option Mississippi
+                    option Missouri
+                    option Montana
+                    option Nebraska
+                    option Nevada
+                    option New Hampshire
+                    option New Jersey
+                    option New Mexico
+                    option New York
+                    option North Carolina
+                    option North Dakota
+                    option Ohio
+                    option Oklahoma
+                    option Oregon
+                    option Pennsylvania
+                    option Rhode Island
+                    option South Carolina
+                    option South Dakota
+                    option Tennessee
+                    option Texas
+                    option  Uttah
+                    option Vermont
+                    option Virginia
+                    option Washington
+                    option West Virginia
+                    option Wisconsin
+                    option Wyoming
+            // Text input
+            .form-group
+              label.col-md-4.control-label Zip Code
+              .col-md-4.inputGroupContainer
+                .input-group
+                  span.input-group-addon
+                    i.glyphicon.glyphicon-home
+                  input.form-control(name='zip', placeholder='Zip Code', type='text')
+            // Text input
+            .form-group
+              label.col-md-4.control-label Website or domain name
+              .col-md-4.inputGroupContainer
+                .input-group
+                  span.input-group-addon
+                    i.glyphicon.glyphicon-globe
+                  input.form-control(name='website', placeholder='Website or domain name', type='text')
+            // radio checks
+            .form-group
+              label.col-md-4.control-label Do you have hosting?
+              .col-md-4
+                .radio
+                  label
+                    input(type='radio', name='hosting', value='yes')
+                    |  Yes
+                .radio
+                  label
+                    input(type='radio', name='hosting', value='no')
+                    |  No
+            // Text area
+            .form-group
+              label.col-md-4.control-label Project Description
+              .col-md-4.inputGroupContainer
+                .input-group
+                  span.input-group-addon
+                    i.glyphicon.glyphicon-pencil
+                  textarea.form-control(name='comment', placeholder='Project Description')
+            // Success message
+            #success_message.alert.alert-success(role='alert')
+              | Success 
+              i.glyphicon.glyphicon-thumbs-up
+              |  Thanks for contacting us, we will get back to you shortly.
+            // Button
+            .form-group
+              label.col-md-4.control-label
+              .col-md-4
+                button.btn.btn-warning(type='submit')
+                  | Send 
+                  span.glyphicon.glyphicon-send
+      // /.container
+      //
+        <div class="portfolio-grid">
+        <div class="row">
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+        <a href="#"><img alt="" src="img/porf-1.jpg">
+        <div class="portfolio-over">
+        <div>
+        <h3 class="card-title">
+        The Dude Rockin'
+        </h3>
+        <p class="card-text">
+        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+        </p>
+        </div>
+        </div></a>
+        </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+        <a href="#"><img alt="" src="img/porf-2.jpg">
+        <div class="portfolio-over">
+        <div>
+        <h3 class="card-title">
+        The Dude Rockin'
+        </h3>
+        <p class="card-text">
+        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+        </p>
+        </div>
+        </div></a>
+        </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+        <a href="#"><img alt="" src="img/porf-3.jpg">
+        <div class="portfolio-over">
+        <div>
+        <h3 class="card-title">
+        The Dude Rockin'
+        </h3>
+        <p class="card-text">
+        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+        </p>
+        </div>
+        </div></a>
+        </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+        <a href="#"><img alt="" src="img/porf-4.jpg">
+        <div class="portfolio-over">
+        <div>
+        <h3 class="card-title">
+        The Dude Rockin'
+        </h3>
+        <p class="card-text">
+        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+        </p>
+        </div>
+        </div></a>
+        </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+        <a href="#"><img alt="" src="img/porf-5.jpg">
+        <div class="portfolio-over">
+        <div>
+        <h3 class="card-title">
+        The Dude Rockin'
+        </h3>
+        <p class="card-text">
+        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+        </p>
+        </div>
+        </div></a>
+        </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+        <a href="#"><img alt="" src="img/porf-6.jpg">
+        <div class="portfolio-over">
+        <div>
+        <h3 class="card-title">
+        The Dude Rockin'
+        </h3>
+        <p class="card-text">
+        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+        </p>
+        </div>
+        </div></a>
+        </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+        <a href="#"><img alt="" src="img/porf-7.jpg">
+        <div class="portfolio-over">
+        <div>
+        <h3 class="card-title">
+        The Dude Rockin'
+        </h3>
+        <p class="card-text">
+        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+        </p>
+        </div>
+        </div></a>
+        </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+        <a href="#"><img alt="" src="img/porf-8.jpg">
+        <div class="portfolio-over">
+        <div>
+        <h3 class="card-title">
+        The Dude Rockin'
+        </h3>
+        <p class="card-text">
+        Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+        </p>
+        </div>
+        </div></a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </section>
+      // /Portfolio
+      // Team
+      section#team.team
+        .container
+          h2.text-center
+            | Meet the Custodians of Records
+          .row
+            .col-sm-4.col-xs-6
+              .card.card-block
+                a(href='#')
+                  img.team-img(alt='', src='img/team-1.jpg')
+                  .card-title-wrap
+                    span.card-title Ali Huda
+                    span.card-text CMO
+                  .team-over
+                    h4.hidden-md-down
+                      | Connect with me
+                    nav.social-nav
+                      a(href='#')
+                        i.fa.fa-twitter
+                      a(href='#')
+                        i.fa.fa-facebook
+                      a(href='#')
+                        i.fa.fa-linkedin
+                      a(href='#')
+                        i.fa.fa-envelope
+                    p
+                      | Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+            .col-sm-4.col-xs-6
+              .card.card-block
+                a(href='#')
+                  img.team-img(alt='', src='img/team-2.jpeg')
+                  .card-title-wrap
+                    span.card-title Marissa Pippen
+                    span.card-text CIO /Chief Product Officer
+                  .team-over
+                    h4.hidden-md-down
+                      | Connect with me
+                    nav.social-nav
+                      a(href='#')
+                        i.fa.fa-twitter
+                      a(href='#')
+                        i.fa.fa-facebook
+                      a(href='#')
+                        i.fa.fa-linkedin
+                      a(href='#')
+                        i.fa.fa-envelope
+                    p
+                      | Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+            .col-sm-4.col-xs-6
+              .card.card-block
+                a(href='#')
+                  img.team-img(alt='', src='img/team-3.jpg', height='350', width='443')
+                  .card-title-wrap
+                    span.card-title Madinah Nelson
+                    span.card-text CSO
+                  .team-over
+                    h4.hidden-md-down
+                      | Connect with me
+                    nav.social-nav
+                      a(href='#')
+                        i.fa.fa-twitter
+                      a(href='#')
+                        i.fa.fa-facebook
+                      a(href='#')
+                        i.fa.fa-linkedin
+                      a(href='#')
+                        i.fa.fa-envelope
+                    p
+                      | Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+      // /Team
+      // @component: footer
+      section#contact
+        .container
+          .row
+            .col-md-12.text-center
+              h2.section-title Contact Us
+          .row.justify-content-center
+            .col-lg-3.col-md-4
+              .info
+                div
+                  i.fa.fa-map-marker
+                  p
+                    | A108 Adam Street
+                    br
+                    | New York, NY 535022
+                div
+                  i.fa.fa-envelope
+                  p info@example.com
+                div
+                  i.fa.fa-phone
+                  p +1 5589 55488 55s
+            .col-lg-5.col-md-8
+              .form
+                #sendmessage Your message has been sent. Thank you!
+                #errormessage
+                form.contactForm(action='', method='post', role='form')
+                  .form-group
+                    input#name.form-control(type='text', name='name', placeholder='Your Name', data-rule='minlen:4', data-msg='Please enter at least 4 chars')
+                    .validation
+                  .form-group
+                    input#email.form-control(type='email', name='email', placeholder='Your Email', data-rule='email', data-msg='Please enter a valid email')
+                    .validation
+                  .form-group
+                    input#subject.form-control(type='text', name='subject', placeholder='Subject', data-rule='minlen:4', data-msg='Please enter at least 8 chars of subject')
+                    .validation
+                  .form-group
+                    textarea.form-control(name='message', rows='5', data-rule='required', data-msg='Please write something for us', placeholder='Message')
+                    .validation
+                  .text-center
+                    button(type='submit') Send Message
+      footer.site-footer
+        .bottom
+          .container
+            .row
+              .col-lg-6.col-xs-12.text-lg-left.text-center
+                p.copyright-text
+                .credits
+                  //
+                    All the links in the footer should remain intact.
+                    You can delete the links only if you purchased the pro version.
+                    Licensing information: https://bootstrapmade.com/license/
+                    Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Bell
+                  a(href='https://bootstrapmade.com/') Designed by Ali, Madinah, Marissa 
+              .col-lg-6.col-xs-12.text-lg-right.text-center
+                ul.list-inline
+                  li.list-inline-item
+                    a(href='index.html') Home
+                  li.list-inline-item
+                    a(href='#about') About Us
+                  li.list-inline-item
+                    a(href='#features') Features
+                  li.list-inline-item
+                    a(href='#portfolio') Portfolio
+                  li.list-inline-item
+                    a(href='#team') Team
+                  li.list-inline-item
+                    a(href='#contact') Contact
+      a.scrolltop(href='#')
+        span.fa.fa-angle-up
+      // Required JavaScript Libraries
+      script(src='lib/jquery/jquery.min.js')
+      script(src='lib/jquery/jquery-migrate.min.js')
+      script(src='lib/superfish/hoverIntent.js')
+      script(src='lib/superfish/superfish.min.js')
+      script(src='lib/tether/js/tether.min.js')
+      script(src='lib/stellar/stellar.min.js')
+      script(src='lib/bootstrap/js/bootstrap.bundle.min.js')
+      script(src='lib/counterup/counterup.min.js')
+      script(src='lib/waypoints/waypoints.min.js')
+      script(src='lib/easing/easing.js')
+      script(src='lib/stickyjs/sticky.js')
+      script(src='lib/parallax/parallax.js')
+      script(src='lib/lockfixed/lockfixed.min.js')
+      // Template Specisifc Custom Javascript File
+      script(src='js/custom.js')
+      script(src='contactform/contactform.js')

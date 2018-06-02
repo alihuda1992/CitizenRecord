@@ -1,5 +1,5 @@
 var express = require('express');
-var passport = require('passport');
+var  passport = require('passport');
 var router = express.Router();
 
 const env = {
@@ -11,7 +11,7 @@ const env = {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send('<a href="/login"> Login</a>' );
+  res.render(path.join(__dirname,'index'));
 });
 
 router.get('/login', passport.authenticate('auth0', {

@@ -5,7 +5,7 @@ var router = express.Router();
 
 /* GET user profile. */
 router.get('/', ensureLoggedIn, function(req, res, next) {
-  // res.send("user Dashboard coming")
+  // res.sendFile("index.html")
   res.render('user', {
     user: req.user
   });

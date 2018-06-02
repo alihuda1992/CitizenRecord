@@ -5,14 +5,14 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-var dotenv = require('dotenv');
+// var dotenv = require('dotenv');
 var passport = require('passport');
 var Auth0Strategy = require('passport-auth0');
 var flash = require('connect-flash');
 var app = express();
 
 require("dotenv").config();
-dotenv.load();
+// dotenv.load();
 
 // Set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -54,7 +54,7 @@ passport.deserializeUser(function(user, done) {
 });
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('public', path.join(__dirname, 'public'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
@@ -130,7 +130,7 @@ var mysql = require("mysql");
 var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "password",
+  password: "Maddough2018!",
   database: "citizenrecord"
 });
 
