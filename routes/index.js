@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 router.get('/login', passport.authenticate('auth0', {
   clientID: env.AUTH0_CLIENT_ID,
   domain: env.AUTH0_DOMAIN,
-  redirectUri: env.AUTH0_CALLBACK_URL,
+  redirectUrl: env.AUTH0_CALLBACK_URL,
   responseType: 'code',
   audience: 'https://' + env.AUTH0_DOMAIN + '/userinfo',
   scope: 'openid profile'}),
