@@ -1,19 +1,15 @@
 var mysql = require("mysql");
 
-var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "password",
-  database: "citizenrecord"
-});
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+}else {
+  connection = mysql.createConnection({
+    host:'localhost',
+    user:'root',
+    password: 'hacktheplanet',
+    database:'citizenfinder'
+  })
+}
 
-connection.connect(function(err) {
-  if (err) throw err;
-  connection.query("SELECT * FROM posts", function (err, result, fields) {
-    if (err) throw err;
-  });
-
-});
-
-//connection.connect();
+connection.connect();
 module.exports=connection;
