@@ -215,7 +215,7 @@ legend Tell Your Story!
     .input-group
       span.input-group-addon
         i.glyphicon.glyphicon-user
-      input.form-control(name='first_name', placeholder='User Name', type='text')
+      input.form-control(id='first_name', placeholder='User Name', type='text' )
 // Text input
 .form-group
   label.col-md-4.control-label Zipcode
@@ -223,7 +223,7 @@ legend Tell Your Story!
     .input-group
       span.input-group-addon
         i.glyphicon.glyphicon-user
-      input.form-control(name='Date', placeholder='Enter your zipcode (Ex. 30014)', type='text')
+      input.form-control(id='subzip', placeholder='Enter your zipcode (Ex. 30014)', type='text')
 // Text input
 .form-group
   label.col-md-4.control-label Date of Incident
@@ -231,7 +231,7 @@ legend Tell Your Story!
     .input-group
       span.input-group-addon
         i.glyphicon.glyphicon-calendar
-      input.form-control(name='email', placeholder='YYYY-MM-DD', type='text')
+      input.form-control(id='subdate', placeholder='YYYY-MM-DD', type='text')
 // Text input
 .form-group
   label.col-md-4.control-label Badge ID#
@@ -239,7 +239,7 @@ legend Tell Your Story!
     .input-group
       span.input-group-addon
         i.glyphicon.glyphicon-user
-      input.form-control(name='zip code', placeholder='123456', type='text')
+      input.form-control(id='subbadge', placeholder='123456', type='text')
 // Text input
 .form-group
   label.col-md-4.control-label Agency
@@ -247,7 +247,7 @@ legend Tell Your Story!
     .input-group
       span.input-group-addon
         i.glyphicon.glyphicon-home
-      input.form-control(name='address', placeholder='Police,Fire Department,DMV', type='text')
+      input.form-control(id='subagency', placeholder='Police,Fire Department,DMV', type='text')
 // Text input
 .form-group
   label.col-md-4.control-label Race
@@ -255,7 +255,7 @@ legend Tell Your Story!
     .input-group
       span.input-group-addon
         i.glyphicon.glyphicon-home
-      input.form-control(name='city', placeholder='This optional field helps us track demographic data', type='text')
+      input.form-control(id='subrace', placeholder='This optional field helps us track demographic data', type='text')
 // Text input
 .form-group
   label.col-md-4.control-label Content
@@ -263,12 +263,20 @@ legend Tell Your Story!
     .input-group
       span.input-group-addon
         i.glyphicon.glyphicon-pencil
-      input.form-control(name='zip', placeholder='Enter your post here. Limit 500 characters.', type='text')
+      input.form-control(id='subcontent', placeholder='Enter your post here. Limit 500 characters.', type='text')
+
+.form-group
+  label.col-md-4.control-label agentname
+  .col-md-4.inputGroupContainer
+    .input-group
+      span.input-group-addon
+        i.glyphicon.glyphicon-pencil
+      input.form-control(id='subagent', placeholder='enter the agents name', type='text')
 // Button
 .form-group
   label.col-md-4.control-label
   .col-md-4
-    button.btn.btn-warning(type='submit')
+    button.btn.btn-warning#submitbutton(type='submit')
       | Submit 
       span.glyphicon.glyphicon-send
 .container

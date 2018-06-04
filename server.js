@@ -22,19 +22,19 @@ var routes = require('./routes/index');
 var user = require('./routes/user');
 
 // Parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(bodyParser.json());
 
 // This will configure Passport to use Auth0
-const strategy = new Auth0Strategy(
-  {
+const strategy = new Auth0Strategy({
     domain: process.env.AUTH0_DOMAIN,
     clientID: process.env.AUTH0_CLIENT_ID,
     clientSecret: process.env.AUTH0_CLIENT_SECRET,
-    callbackURL:
-      process.env.AUTH0_CALLBACK_URL || 'http://localhost:8080/callback'
+    callbackURL: process.env.AUTH0_CALLBACK_URL || 'http://localhost:8080/callback'
   },
-  function(accessToken, refreshToken, extraParams, profile, done) {
+  function (accessToken, refreshToken, extraParams, profile, done) {
     // accessToken is the token to call Auth0 API (not needed in the most cases)
     // extraParams.id_token has the JSON Web Token
     // profile has all the information from the user
@@ -45,11 +45,11 @@ const strategy = new Auth0Strategy(
 passport.use(strategy);
 
 // you can use this section to keep a smaller payload
-passport.serializeUser(function(user, done) {
+passport.serializeUser(function (user, done) {
   done(null, user);
 });
 
-passport.deserializeUser(function(user, done) {
+passport.deserializeUser(function (user, done) {
   done(null, user);
 });
 
@@ -59,7 +59,9 @@ app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(
   session({
@@ -75,7 +77,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash());
 
 // Handle auth failure error messages
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   if (req && req.query && req.query.error) {
     req.flash("error", req.query.error);
   }
@@ -83,29 +85,29 @@ app.use(function(req, res, next) {
     req.flash("error_description", req.query.error_description);
   }
   next();
- });
- 
- // Check logged in
- app.use(function(req, res, next) {
-   res.locals.loggedIn = false;
-   if (req.session.passport && typeof req.session.passport.user != 'undefined') {
-     res.locals.loggedIn = true;
-   }
-   next();
- });
- 
- app.use('/', routes);
- app.use('/user', user);
- 
- // catch 404 and forward to error handler
- app.use(function(req, res, next) {
-   const err = new Error('Not Found');
-   err.status = 404;
-   next(err);
- });
+});
 
- if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
+// Check logged in
+app.use(function (req, res, next) {
+  res.locals.loggedIn = false;
+  if (req.session.passport && typeof req.session.passport.user != 'undefined') {
+    res.locals.loggedIn = true;
+  }
+  next();
+});
+
+app.use('/', routes);
+app.use('/user', user);
+
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+if (app.get('env') === 'development') {
+  app.use(function (err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
@@ -116,7 +118,7 @@ app.use(function(req, res, next) {
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
@@ -127,5 +129,5 @@ app.use(function(err, req, res, next) {
 
 
 
-  app.listen(PORT);
-  console.log("connected as id " + PORT);
+app.listen(PORT);
+console.log("connected as id " + PORT);
