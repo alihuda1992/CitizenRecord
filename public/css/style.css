@@ -971,6 +971,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+
+
+.form-group {
+  padding-left: 50px;
+}
+
+
+
+
 @media (max-width: 767px) {
   .block {
     padding-left: 30px;

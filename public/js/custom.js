@@ -4,14 +4,16 @@ $(document).ready(function() {
   $("#submitbutton").click(function () {
     let submitInfo = {
         username: $("#first_name").val().trim(),
-        zipcode: $("#subzip").val().trim(),
+        zipcode: parseInt($("#subzip").val().trim()),
         date: $("#subdate").val().trim(),
-        badgeid: $("#subbadge").val().trim(),
+        badgeid:parseInt($("#subbadge").val().trim(),10),
         agency: $("#subagency").val().trim(),
         race: $("#subrace").val().trim(),
         content: $("#subcontent").val().trim(),
         agent_name :$("#subagent").val().trim(),
     };
+
+    console.log(submitInfo)
 
     $.post("/api/submit",submitInfo,function(data){
         console.log(data) 
