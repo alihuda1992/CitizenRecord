@@ -4,9 +4,9 @@ $(document).ready(function() {
   $("#submitbutton").click(function () {
     let submitInfo = {
         username: $("#first_name").val().trim(),
-        zipcode: parseInt($("#subzip").val().trim()),
+        zipcode: $("#subzip").val().trim(),
         date: $("#subdate").val().trim(),
-        badgeid:parseInt($("#subbadge").val().trim(),10),
+        badgeid:$("#subbadge").val().trim(),
         agency: $("#subagency").val().trim(),
         race: $("#subrace").val().trim(),
         content: $("#subcontent").val().trim(),
