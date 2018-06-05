@@ -7,7 +7,7 @@ const env = {
   AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
   AUTH0_DOMAIN: process.env.AUTH0_DOMAIN,
   AUTH0_CALLBACK_URL:
-  process.env.AUTH0_CALLBACK_URL || 'https://citizenrecord2.herokuapp.com/'
+  process.env.AUTH0_CALLBACK_URL || 'https://citizenrecord2.herokuapp.com'
 };
 
 /* GET home page. */
@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
 router.get('/login', passport.authenticate('auth0', {
   clientID: env.AUTH0_CLIENT_ID,
   domain: env.AUTH0_DOMAIN,
-  redirectUrl: env.AUTH0_CALLBACK_URL,
+  redirectUri: env.AUTH0_CALLBACK_URL,
   responseType: 'code',
   audience: 'https://' + env.AUTH0_DOMAIN + '/userinfo',
   scope: 'openid profile'}),
