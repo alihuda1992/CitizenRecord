@@ -13,7 +13,7 @@ $(document).ready(function () {
             console.log(data)
                 // loop through in here
                 for (let i=0;i<data.length;i++) {
-                    $("#targetdiv").append(`<p>${data[i].incidentdate.trimRight("T")}</p>`);
+                    $("#targetdiv").append(`<p>${data[i].incidentdate}</p>`);
                     $("#targetdiv").append(`<p>${data[i].agency}</p>`);
                     $("#targetdiv").append(`<p>${data[i].content}</p>`);
                 }

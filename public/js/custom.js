@@ -14,6 +14,7 @@ $(document).ready(function() {
     };
 
     console.log(submitInfo)
+    alert("submitted")
 
     $.post("/api/submit",submitInfo,function(data){
         console.log(data) 
