@@ -5,7 +5,7 @@ var connection = require('./connection');
 var orm = {
    
     search: function (zip,badgeid,agency,agent_name,cb) {
-        connection.query('select * from posts where zip in (?) and badgeid like (?) and agency like (?) and agent_name like (?)',[zip,badgeid,agency,agent_name], function (err,result){
+        connection.query('select * from posts where zip like (?) and badgeid like (?) and agency like (?) and agent_name like (?)',[zip,badgeid,agency,agent_name], function (err,result){
             if (err) throw err;
             cb (result);
         }) 
